@@ -1,0 +1,214 @@
+@use "../global/" as *;
+
+header {
+    width: 100%;
+    position: relative;
+    background-color: $color2;
+    color: #fff;
+    .navigation {
+        position: relative;
+        max-width: $max-width;
+        padding: 10px 20px;
+        @include flexSpaceBetween;
+        margin: 0 auto;
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            z-index: 1;
+        }
+
+        .navigation-container {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            height: 100%;
+            background-color: $color2;
+            padding-top: 50px;
+            @include flexCenter;
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            font-weight: 600;
+            font-size: 20px;
+            // z-index: -1;
+            transition: 0.3s ease-in-out;
+
+            .nav-item {
+                .nav-list {
+                    padding: 10px;
+                    .nav-link {
+                        position: relative;
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            bottom: -2px;
+                            width: 0;
+                            left: 0;
+                            height: 2px;
+                            transition: 0.3s ease-in-out;
+                        }
+                        &.selected::after {
+                            width: 100%;
+                            background-color: #fff;
+                        }
+                        &:hover::after {
+                            background-color: #fff;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &.active {
+                right: 0;
+            }
+        }
+        .mobile-menu {
+            z-index: 1;
+        }
+        .auth {
+            display: flex;
+            flex-direction: column-reverse;
+            .nice-select {
+                background: none;
+                width: fit-content;
+                margin: 15px auto 0;
+            }
+            .user-login {
+                position: relative;
+                .user-menu {
+                    width: 40px;
+                    height: 40px;
+                    padding: 7px;
+                    margin: 0 auto;
+                    border-radius: 100%;
+                    background-color: #fff;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                        pointer-events: none;
+                    }
+                }
+                .user-list-menu {
+                    display: none;
+                    position: relative;
+
+                    border-radius: 5px;
+                    text-align: left;
+                    width: 200px;
+                    padding: 10px 5px;
+
+                    a {
+                        display: block;
+                        text-align: center;
+                        padding: 5px;
+                        border-radius: 5px;
+                        &:hover {
+                            color: #fff;
+                            background-color: $color1;
+                        }
+                    }
+                    &.active {
+                        display: grid;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.user header .navigation .navigation-container .add-nav .user-login {
+    display: none;
+    align-items: center;
+    gap: 20px;
+}
+
+.bars {
+    width: 50px;
+    cursor: pointer;
+}
+.bars .line {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 4;
+    stroke-linecap: square;
+    transition:
+        stroke-dasharray 400ms,
+        stroke-dashoffset 400ms;
+}
+.bars .line.top {
+    stroke-dasharray: 40 172;
+}
+.bars .line.middle {
+    stroke-dasharray: 40 111;
+}
+.bars .line.bottom {
+    stroke-dasharray: 40 172;
+}
+.bars.active .top {
+    stroke-dashoffset: -132px;
+}
+.bars.active .middle {
+    stroke-dashoffset: -71px;
+}
+.bars.active .bottom {
+    stroke-dashoffset: -132px;
+}
+
+@include medium {
+    header .navigation {
+        padding: 14px 50px;
+    }
+}
+
+@include large {
+    .user header .navigation .navigation-container {
+        .add-nav .user-login {
+            display: flex;
+        }
+    }
+    header {
+        border-bottom: 1px solid #fff;
+        &.bgcolor {
+            border-bottom: unset;
+        }
+        .navigation {
+            .navigation-container {
+                position: relative;
+                top: unset;
+                right: unset;
+                background: unset;
+                font-weight: 500;
+                font-size: 16px;
+                flex-direction: unset;
+                width: fit-content;
+                padding-top: unset;
+
+                .nav-item {
+                    display: flex;
+                    margin-right: 50px;
+                }
+            }
+            .mobile-menu {
+                display: none;
+            }
+
+            .auth {
+                .user-login .user-list-menu {
+                    position: absolute;
+                    background-color: rgb(240, 240, 240);
+
+                    top: calc(100% + 10px);
+                    right: 0;
+                    a {
+                        color: $color1;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
