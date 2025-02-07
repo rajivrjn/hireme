@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Frontend\VacanciesController;
+use App\Http\Controllers\Frontend\JobController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -10,7 +10,8 @@ Route::get('/', function () {
     return view('frontend.index');
 })->name('home');
 
-Route::get('/jobs', [VacanciesController::class, 'index'])->name('vacancies');
+Route::get('/jobs', [JobController::class, 'index'])->name('vacancies');
+Route::get('/job/{title}-{id}', [JobController::class, 'show'])->name('single_job');
 
 Route::get('/career-advice', function () {
     return view('frontend.advice');

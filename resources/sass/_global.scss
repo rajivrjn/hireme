@@ -91,11 +91,20 @@ section .container {
             border-radius: 5px;
         }
         .qualification {
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 13px;
-            background-color: #a8df9c;
-            width: fit-content;
+            @include flexSpaceBetween;
+            p {
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 13px;
+
+                width: fit-content;
+                &.level {
+                    background-color: #a8df9c;
+                }
+                &.featured {
+                    background-color: #df9e9c;
+                }
+            }
         }
     }
     .card_body {
@@ -104,6 +113,14 @@ section .container {
             font-size: 20px;
             font-weight: 600;
             color: $color2;
+        }
+        .company {
+            padding-bottom: 15px;
+            font-size: 14px;
+            span {
+                font-weight: 500;
+                text-decoration: underline;
+            }
         }
         .category {
             padding: 5px 10px;
@@ -123,20 +140,20 @@ section .container {
         padding-top: 10px;
         align-items: center;
         justify-content: space-between;
+        .date {
+            display: grid;
+            gap: 10px;
+        }
         p {
             font-size: 14px;
             color: #9c9c9c;
+            @include flexSpaceBetween;
         }
-
-        .card_image {
-            border-radius: 50%;
-            border: 2px solid $color2;
-            img {
-                padding: 5px;
-                object-fit: cover;
-                width: 100%;
-                max-width: 50px;
-            }
+        a {
+            border-radius: 5px;
+            background-color: $color2;
+            color: #fff;
+            padding: 10px 20px;
         }
     }
 }

@@ -74,60 +74,11 @@
                             </select>
                         </form>
                     </div>
-                    <a href="" class="card">
-                        <div class="card_header">
-                            <div class="qualification">
-                                Entry Level
-                            </div>
+                    @for ($i = 0; $i <= 5; $i++)
+                        <div class="swiper-slide">
+                            @include('components/card-component')
                         </div>
-                        <div class="card_body">
-                            <h1 class="card_title">Front-End Developer</h1>
-                            <p class="category">IT, ICT sector</p>
-                            <p class="region">Grand bay</p>
-                        </div>
-                        <div class="card_footer">
-                            <p>Added On: 01 Feb 2025</p>
-                            <div class="card_image">
-                                <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
-                            </div>
-                        </div>
-                    </a>
-                    <a href="" class="card">
-                        <div class="card_header">
-                            <div class="qualification">
-                                Entry Level
-                            </div>
-                        </div>
-                        <div class="card_body">
-                            <h1 class="card_title">Front-End Developer</h1>
-                            <p class="category">IT, ICT sector</p>
-                            <p class="region">Grand bay</p>
-                        </div>
-                        <div class="card_footer">
-                            <p>Added On: 01 Feb 2025</p>
-                            <div class="card_image">
-                                <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
-                            </div>
-                        </div>
-                    </a>
-                    <a href="" class="card">
-                        <div class="card_header">
-                            <div class="qualification">
-                                Entry Level
-                            </div>
-                        </div>
-                        <div class="card_body">
-                            <h1 class="card_title">Front-End Developer</h1>
-                            <p class="category">IT, ICT sector</p>
-                            <p class="region">Grand bay</p>
-                        </div>
-                        <div class="card_footer">
-                            <p>Added On: 01 Feb 2025</p>
-                            <div class="card_image">
-                                <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
-                            </div>
-                        </div>
-                    </a>
+                    @endfor
                     <div class="pagination">
                         {{-- @if ($paginator->hasPages()) --}}
                         <nav role="navigation" aria-label="Pagination Navigation" class="flex justify-between">

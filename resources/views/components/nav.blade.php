@@ -1,7 +1,7 @@
 <nav class="navigation">
     <div class="logo">
         <a href="{{ route('home') }}">
-            {{ config('app.name', 'Job Board') }}
+            HireMe.mu
         </a>
     </div>
     <div class="navigation-container">
