@@ -1,0 +1,33 @@
+@use "../global/" as *;
+
+.career_advice {
+    .main_container {
+        display: grid;
+        gap: 15px;
+        .card {
+            .card_body {
+                padding: 10px 0;
+                h2 {
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+            }
+            &:hover {
+                .card_body h2 {
+                    color: $color2;
+                }
+            }
+        }
+    }
+
+    @include medium {
+        .main_container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @include large {
+        .main_container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

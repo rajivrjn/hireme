@@ -1,0 +1,65 @@
+@use "../global/" as *;
+.faq {
+    .container {
+        .collapsible {
+            background: #f4f4f4;
+            border-radius: 5px;
+            overflow: hidden;
+
+            ol,
+            ul,
+            li {
+                list-style-position: inside;
+            }
+        }
+        .question {
+            padding: 10px 40px 10px 15px;
+            cursor: pointer;
+            background-color: #ebebeb;
+
+            @include flexSpaceBetween;
+            h1 {
+                width: 100%;
+                font-weight: 600;
+                font-size: 15px;
+            }
+            .expanded {
+                position: relative;
+                height: 25px;
+                width: 25px;
+                span {
+                    position: absolute;
+                    width: 90%;
+                    height: 2px;
+                    border-bottom: 3px solid $color1;
+                    border-radius: 5px;
+                    top: 50%;
+                    right: -25px;
+                    &:first-of-type {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+        .answer {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s ease;
+            transition: opacity 0.8s ease;
+            line-height: 1.5;
+            border-bottom: 3px solid $color1;
+        }
+        .collapsible.open {
+            .answer {
+                height: auto;
+                padding: 10px 50px 10px 15px;
+                opacity: 1;
+                font-size: 15px;
+            }
+            .question span:first-of-type {
+                opacity: 0;
+            }
+        }
+    }
+}

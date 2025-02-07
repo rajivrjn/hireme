@@ -1,0 +1,59 @@
+@use "../global/" as *;
+.contact .container {
+    .contact-information {
+        h2 {
+            color: $color2;
+            line-height: 30px;
+            font-weight: 600;
+            padding-bottom: 15px;
+        }
+        .contact-information-wrapper {
+            // background-color: red;
+            ul {
+                list-style-type: none;
+            }
+            li {
+                padding: 5px;
+                font-weight: 600;
+                color: $color2;
+                span.label {
+                    color: #5b5b5bee;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@include medium {
+    .contact .container {
+        .wrapper {
+            display: flex;
+            max-width: 800px;
+            margin: 0 auto;
+            #contact_form {
+                width: 100%;
+                display: grid;
+                gap: 10px;
+            }
+        }
+        .contact-information {
+            background-color: $color2;
+            border-radius: 5px;
+            padding: 15px;
+            height: fit-content;
+            min-width: fit-content;
+            h2 {
+                color: #fff;
+            }
+            .contact-information-wrapper {
+                li {
+                    color: #fff;
+                    span.label {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

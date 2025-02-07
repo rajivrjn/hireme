@@ -1,28 +1,32 @@
 <nav class="navigation">
     <div class="logo">
-        <a href="">
+        <a href="{{ route('home') }}">
             {{ config('app.name', 'Job Board') }}
         </a>
     </div>
     <div class="navigation-container">
         <ul class="nav-item">
             <li class="nav-list">
-                <a href="" class="nav-link selected">Home</a>
+                <a href="{{ route('home') }}" class="nav-link @if (Route::currentRouteName() == 'home') selected @endif">Home</a>
             </li>
             <li class="nav-list">
-                <a href="" class="nav-link">Vacancies</a>
+                <a href="{{ route('vacancies') }}"
+                    class="nav-link @if (Route::currentRouteName() == 'vacancies') selected @endif">Jobs</a>
             </li>
             <li class="nav-list">
-                <a href="" class="nav-link">Career Advice</a>
+                <a href="{{ route('advice') }}"
+                    class="nav-link @if (Route::currentRouteName() == 'advice') selected @endif">Career Advice</a>
             </li>
             <li class="nav-list">
-                <a href="" class="nav-link">FAQ</a>
+                <a href="{{ route('faq') }}" class="nav-link @if (Route::currentRouteName() == 'faq') selected @endif">FAQ</a>
             </li>
             <li class="nav-list">
-                <a href="" class="nav-link">About Us</a>
+                <a href="{{ route('about') }}" class="nav-link @if (Route::currentRouteName() == 'about') selected @endif">About
+                    Us</a>
             </li>
             <li class="nav-list">
-                <a href="" class="nav-link">Contact</a>
+                <a href="{{ route('contact') }}"
+                    class="nav-link @if (Route::currentRouteName() == 'contact') selected @endif">Contact</a>
             </li>
         </ul>
         <div class="auth">

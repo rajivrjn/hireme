@@ -1,0 +1,40 @@
+@use "../global/" as *;
+
+.about {
+    .summary {
+        .img-container {
+            padding: 25px;
+            // background-color: blueviolet;
+            border-radius: 5px;
+            border: 2px solid $color2;
+            max-width: 300px;
+            margin: 0 auto 25px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    p {
+        text-align: justify;
+        padding-bottom: 15px;
+    }
+    ul {
+        padding: 5px 0 20px;
+        li {
+            list-style-position: inside;
+            padding: 2px;
+        }
+    }
+}
+
+@include medium {
+    .about {
+        .summary {
+            .img-container {
+                float: left;
+                padding-right: 25px;
+                margin: 0 35px 10px 0;
+            }
+        }
+    }
+}

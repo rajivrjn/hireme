@@ -1,0 +1,53 @@
+@use "../global/" as *;
+
+.grid_list {
+    .aside {
+        display: grid;
+        margin-bottom: 15px;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        padding: 15px;
+        align-content: baseline;
+        h2 {
+            padding-bottom: 15px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+    #filter_form {
+        display: none;
+        gap: 15px;
+        padding: 15px 0;
+        align-content: baseline;
+        &.expand {
+            display: grid;
+        }
+    }
+    .main_container {
+        display: grid;
+        gap: 15px;
+    }
+}
+
+@include medium {
+    .grid_list .container .wrapper {
+        display: flex;
+        gap: 20px;
+        .aside {
+            width: 100%;
+            max-width: 300px;
+            height: fit-content;
+            #filter {
+                display: none;
+            }
+        }
+        #filter_form {
+            padding: 0 0 15px;
+            display: grid;
+            height: 100%;
+        }
+    }
+    .main_container {
+        flex: 1;
+    }
+}

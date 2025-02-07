@@ -3,21 +3,22 @@
 footer {
     width: 100%;
     min-height: 0;
-    font-size: 13px;
-    background: $color1;
+    font-size: 14px;
+    background: $color2;
     text-align: center;
     color: rgb(230, 230, 230);
     box-shadow: 0 0 10px #e0e0e0;
     .footer-group {
         padding: 25px 15px;
         display: grid;
-        gap: 10px;
-        max-width: 1300px;
+        gap: 20px;
+        max-width: $max-width;
         margin: 0 auto;
         h1 {
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 500;
             padding-bottom: 15px;
+            text-decoration: underline;
         }
         img {
             width: 100%;
@@ -27,21 +28,11 @@ footer {
         li {
             list-style-type: none;
             font-size: 15px;
-            a {
-                text-decoration: underline;
-            }
-        }
-        .first-footer img {
-            margin-top: 15px;
-            max-width: 300px;
         }
 
         .fourth-footer {
-            img {
-                width: 50px;
-            }
             a {
-                text-decoration: none;
+                display: block;
             }
         }
     }

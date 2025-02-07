@@ -171,10 +171,6 @@ header {
         }
     }
     header {
-        border-bottom: 1px solid #fff;
-        &.bgcolor {
-            border-bottom: unset;
-        }
         .navigation {
             .navigation-container {
                 position: relative;

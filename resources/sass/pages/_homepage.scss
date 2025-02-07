@@ -1,0 +1,107 @@
+@use "../global/" as *;
+
+.hero_section {
+    height: 100%;
+    background-image: url("@/images/cover.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    .container {
+        height: 100%;
+        padding: 50px 15px;
+        @include flexCenter;
+        flex-direction: column;
+        .hero_title {
+            text-align: center;
+            font-weight: 800;
+            line-height: 1.3;
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-family: $font2;
+            padding-bottom: 30px;
+        }
+        .search_box {
+            width: 100%;
+            max-width: 600px;
+            background-color: rgba(51, 51, 51, 0.625);
+            padding: 20px;
+            border-radius: 5px;
+            .hero_form_container {
+                display: grid;
+                gap: 10px;
+            }
+            .job_availability {
+                padding-top: 15px;
+                text-align: right;
+                color: #fff;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.featured_agency {
+    .swiper-slide {
+        padding: 20px;
+        height: auto;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .card_body {
+        padding: 15px;
+        img {
+            display: block;
+            width: 100%;
+            max-width: 100px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.adverts .swiper-slide {
+    img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+}
+
+.advice {
+    padding-bottom: 50px;
+    .card_body {
+        padding: 10px 0;
+        h2 {
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    .card:hover {
+        .card_body h2 {
+            color: $color2;
+        }
+    }
+}
+
+@include medium {
+    .hero_section .container {
+        padding: 100px 15px;
+        .search_box {
+            max-width: 800px;
+            .hero_form_container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@include large {
+    .hero_section .container .search_box .hero_form_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

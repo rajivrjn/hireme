@@ -1,12 +1,32 @@
 {
+  "resources/images/advert.jpg": {
+    "file": "assets/advert-XgBrF2Px.jpg",
+    "src": "resources/images/advert.jpg"
+  },
+  "resources/images/blog.jpg": {
+    "file": "assets/blog-CYTtLLxF.jpg",
+    "src": "resources/images/blog.jpg"
+  },
+  "resources/images/company_logo.png": {
+    "file": "assets/company_logo-Cvs64B2F.png",
+    "src": "resources/images/company_logo.png"
+  },
+  "resources/images/cover.jpg": {
+    "file": "assets/cover-DmDMNYIc.jpg",
+    "src": "resources/images/cover.jpg"
+  },
+  "resources/images/logo.png": {
+    "file": "assets/logo-BoM0JPFr.png",
+    "src": "resources/images/logo.png"
+  },
   "resources/js/app.js": {
-    "file": "assets/app-B_dviz6m.js",
+    "file": "assets/app-C2_c8djQ.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-B5NPe9e8.css",
+    "file": "assets/app-CjYQhYYJ.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }
