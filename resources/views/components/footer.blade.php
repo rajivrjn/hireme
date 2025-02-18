@@ -3,19 +3,19 @@
         <h1>Quick Links</h1>
         <ul class="footer-list">
             <li>
-                <a href="" class="footer-link">Create an acount</a>
+                <a href="{{ route('login') }}" class="footer-link">Create an acount</a>
             </li>
             <li>
                 <a href="" class="footer-link">My Account</a>
             </li>
             <li>
-                <a href="" class="footer-link">Browse Companies</a>
+                <a href="{{ route('companies') }}" class="footer-link">Browse Companies</a>
             </li>
             <li>
-                <a href="" class="footer-link">Browse Jobs</a>
+                <a href="{{ route('vacancies') }}" class="footer-link">Browse Jobs</a>
             </li>
             <li>
-                <a href="" class="footer-link">Browse Jobs by sector</a>
+                <a href="{{ route('categories') }}" class="footer-link">Browse Jobs by sector</a>
             </li>
 
         </ul>
@@ -24,16 +24,16 @@
         <h1>Useful Links</h1>
         <ul class="footer-list">
             <li>
-                <a href="" class="footer-link">About Us</a>
+                <a href="{{ route('about') }}" class="footer-link">About Us</a>
             </li>
             <li>
-                <a href="" class="footer-link">Contact Us</a>
+                <a href="{{ route('contact') }}" class="footer-link">Contact Us</a>
             </li>
             <li>
-                <a href="" class="footer-link">Terms & Conditions</a>
+                <a href="{{ route('terms') }}" class="footer-link">Terms & Conditions</a>
             </li>
             <li>
-                <a href="" class="footer-link">Privacy Policy</a>
+                <a href="{{ route('privacy') }}" class="footer-link">Privacy Policy</a>
             </li>
         </ul>
     </div>

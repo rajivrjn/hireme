@@ -51,7 +51,7 @@
                     </ul>
                 </div>
             @else
-                <a href="" class="nav-link">LOGIN</a>
+                <a href="{{ route('login') }}" class="nav-link">LOGIN</a>
             @endif
         </div>
     </div>

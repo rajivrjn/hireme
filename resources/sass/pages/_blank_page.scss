@@ -1,0 +1,39 @@
+@use "../global/" as *;
+
+.blank_page {
+    .breadcrumb {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        .page_title {
+            color: $color2;
+            &::after {
+                border-bottom: unset;
+            }
+        }
+        small {
+            font-size: 14px;
+            a {
+                font-weight: 600;
+                text-decoration: underline;
+                color: $color2;
+            }
+        }
+
+        p {
+            padding: 0 0 10px;
+        }
+    }
+    .card_header {
+        padding-bottom: 25px;
+        .page_title {
+            color: $color2;
+            padding-top: 15px;
+        }
+    }
+}
+
+@include medium {
+    .blank_page .card {
+        padding: 25px 50px;
+    }
+}

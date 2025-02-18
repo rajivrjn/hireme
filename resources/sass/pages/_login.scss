@@ -1,0 +1,68 @@
+@use "../global/" as *;
+
+.login {
+    width: 100%;
+    max-width: 600px;
+    .container {
+        display: grid;
+        gap: 15px;
+        .employee_section,
+        .employer_section,
+        .employee_section_form,
+        .employer_section_form {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px 1px $grey;
+            padding: 20px 15px;
+            h2 {
+                text-align: center;
+                color: $color2;
+                text-decoration: underline;
+                font-weight: 600;
+                padding-bottom: 25px;
+            }
+            form {
+                display: grid;
+                gap: 10px;
+            }
+        }
+        .employee_section_form {
+            background-color: orange;
+        }
+        .employer_section_form {
+            background-color: purple;
+        }
+
+        .employee_section_form,
+        .employer_section_form {
+            padding: 0;
+            a {
+                display: block;
+                font-size: 20px;
+                padding: 75px 20px;
+                font-weight: 600;
+                color: #fff;
+                text-align: center;
+            }
+        }
+
+        .forgot_password {
+            text-align: right;
+        }
+        p {
+            padding-top: 15px;
+            text-align: center;
+            a {
+                color: $color2;
+                font-weight: 500;
+                text-wrap: nowrap;
+            }
+        }
+    }
+}
+
+@include medium {
+    .login .container {
+        display: flex;
+    }
+}

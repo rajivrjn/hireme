@@ -1,0 +1,130 @@
+@use "../global/" as *;
+
+.single_job,
+.single_blog {
+    .breadcrumb {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        .page_title {
+            color: $color2;
+            &::after {
+                border-bottom: unset;
+            }
+        }
+        small {
+            font-size: 14px;
+            a {
+                font-weight: 600;
+                text-decoration: underline;
+                color: $color2;
+            }
+        }
+
+        p {
+            padding: 0 0 10px;
+        }
+    }
+    .grid {
+        display: grid;
+        gap: 25px;
+        .single_item {
+            text-align: center;
+            .icon {
+                @include flexCenter;
+                width: 48px;
+                height: 48px;
+                background-color: $color2;
+                border-radius: 8px;
+                color: #fff;
+                margin: auto auto 10px;
+            }
+            p {
+                font-size: 14px;
+            }
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+
+    .block_card.description {
+        p {
+            text-align: justify;
+            padding-bottom: 15px;
+        }
+        ul {
+            padding: 10px 0;
+            list-style-position: inside;
+            li {
+                padding-bottom: 15px;
+            }
+        }
+    }
+
+    .main-information,
+    .company_info {
+        display: grid;
+        gap: 15px;
+    }
+
+    .company_info {
+        text-align: center;
+        .material-symbols-outlined {
+            padding: 15px;
+        }
+        h2 {
+            font-weight: 500;
+            font-size: 20px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .company_image {
+            img {
+                width: 100%;
+                max-width: 150px;
+            }
+        }
+        .btn_link {
+            margin-top: 25px;
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.single_blog .card {
+    padding: 15px;
+}
+@include small {
+    .single_job {
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@include medium {
+    .single_job {
+        .grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    .single_blog .card {
+        padding: 25px 50px;
+    }
+}
+
+@include large {
+    .single_job .wrapper {
+        width: 100%;
+        display: flex !important;
+        .main-information {
+            flex: 1;
+        }
+        .company_info {
+            height: fit-content;
+            min-width: 350px;
+        }
+    }
+}

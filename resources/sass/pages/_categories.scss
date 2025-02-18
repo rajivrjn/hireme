@@ -1,0 +1,49 @@
+@use "../global/" as *;
+
+.categories,
+.companies {
+    .container {
+        .wrapper {
+            padding: 25px 0;
+            ul {
+                display: grid;
+                gap: 15px;
+                li {
+                    list-style: none;
+                    padding: 15px;
+                    background-color: #093365;
+                    border-radius: 5px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.companies .container .wrapper ul li {
+    text-align: center;
+    background-color: unset;
+    color: unset;
+    h3 {
+        font-weight: 500;
+        font-size: 15px;
+        color: $color2;
+    }
+}
+
+@include medium {
+    .categories,
+    .companies {
+        .container .wrapper ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@include large {
+    .categories,
+    .companies {
+        .container .wrapper ul {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

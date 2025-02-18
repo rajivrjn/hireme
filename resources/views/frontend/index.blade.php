@@ -80,7 +80,6 @@
                 </div>
                 <p class="job_availability">Total job available: <span id="result"></span></p>
             </form>
-
         </div>
     </section>
     <section class="featured_agency">
@@ -88,69 +87,16 @@
             <h1 class="section_title">Featured Agency</h1>
             <div class="swiper featured-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_body">
-                                <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
-                            </div>
+                    @for ($i = 0; $i <= 15; $i++)
+                        <div class="swiper-slide">
+                            <a href="{{ route('single_company', 'test') }}" class="card">
+                                <div class="card_body">
+                                    <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
+                                </div>
 
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_body">
-                                <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_body">
-                                <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_body">
-                                <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_body">
-                                <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_body">
-                                <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_body">
-                                <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_body">
-                                <img src="{{ Vite::asset('resources/images/company_logo.png') }}" alt="">
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    @endfor
                 </div>
                 <div class="swiper-pagination"></div>
             </div>

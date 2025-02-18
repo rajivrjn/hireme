@@ -1,8 +1,4 @@
 {
-  "resources/images/advert.jpg": {
-    "file": "assets/advert-XgBrF2Px.jpg",
-    "src": "resources/images/advert.jpg"
-  },
   "resources/images/blog.jpg": {
     "file": "assets/blog-CYTtLLxF.jpg",
     "src": "resources/images/blog.jpg"
@@ -26,7 +22,7 @@
     "isEntry": true
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-CsXu6x34.css",
+    "file": "assets/app-B-B1U8x8.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   }

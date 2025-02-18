@@ -8,7 +8,6 @@
             padding-bottom: 15px;
         }
         .contact-information-wrapper {
-            // background-color: red;
             ul {
                 list-style-type: none;
             }
@@ -23,6 +22,16 @@
             }
         }
     }
+    .wrapper {
+        #contact_form {
+            box-shadow: 0 0 10px 1px $grey;
+            border-radius: 5px;
+            padding: 15px;
+            width: 100%;
+            display: grid;
+            gap: 10px;
+        }
+    }
 }
 
 @include medium {
@@ -31,11 +40,6 @@
             display: flex;
             max-width: 800px;
             margin: 0 auto;
-            #contact_form {
-                width: 100%;
-                display: grid;
-                gap: 10px;
-            }
         }
         .contact-information {
             background-color: $color2;

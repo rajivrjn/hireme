@@ -1,0 +1,52 @@
+@use "../global/" as *;
+
+.company {
+    .wrapper {
+        .company_profile {
+            .company_logo img {
+                display: block;
+                margin: 0 auto;
+            }
+            .company_description {
+                text-align: justify;
+            }
+        }
+        .company-jobs {
+            display: grid;
+            gap: 15px;
+        }
+    }
+}
+
+@include small {
+    .company {
+        .wrapper {
+            .company_profile .company_body {
+                display: flex;
+                // .company_logo img {
+                //     display: block;
+                //     margin: 0 auto;
+                // }
+                // .company_description {
+                //     text-align: justify;
+                // }
+            }
+        }
+    }
+}
+
+@include medium {
+    .company {
+        .wrapper {
+            .company_profile .company_body {
+                gap: 25px;
+                .company_description {
+                    padding: 25px;
+                }
+            }
+            .company-jobs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

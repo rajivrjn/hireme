@@ -31,7 +31,7 @@ header {
             width: 100%;
             font-weight: 600;
             font-size: 20px;
-            // z-index: -1;
+            z-index: 10;
             transition: 0.3s ease-in-out;
 
             .nav-item {
@@ -64,7 +64,7 @@ header {
             }
         }
         .mobile-menu {
-            z-index: 1;
+            z-index: 11;
         }
         .auth {
             display: flex;
@@ -114,6 +114,9 @@ header {
                     &.active {
                         display: grid;
                     }
+                }
+                a {
+                    display: inline-flex;
                 }
             }
         }

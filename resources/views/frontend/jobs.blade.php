@@ -2,8 +2,6 @@
 
 @section('page_title', 'Jobs')
 
-
-
 @section('content')
 
     <section class="grid_list">

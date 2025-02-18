@@ -3,17 +3,18 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Job;
+use App\Models\Vacancies;
 use Illuminate\Http\Request;
 
-class JobController extends Controller
+
+class VacanciesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('frontend.vacancies');
+        return view('frontend.jobs');
     }
 
     /**
@@ -37,21 +38,23 @@ class JobController extends Controller
      */
     public function show($title, $id)
     {
-        $job = Job::findOrFail($id);
+        // $job = Vacancies::findOrFail($id);
 
-        if ($job->title !== $title) {
-            return redirect()->route('single_job', [
-                'title' => $job->title,
-                'id' => $job->id
-            ]);
-        }
+        // if ($job->title !== $title) {
+        //     return redirect()->route('single_job', [
+        //         'title' => $job->title,
+        //         'id' => $job->id
+        //     ]);
+        // }
 
-        return view('frontend.single_job', compact('job'));
+        return view('frontend.single_job');
+        // return view('frontend.single_job', compact('job'));
     }
+
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Job $job)
+    public function edit(string $id)
     {
         //
     }
@@ -59,7 +62,7 @@ class JobController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Job $job)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -67,7 +70,7 @@ class JobController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Job $job)
+    public function destroy(string $id)
     {
         //
     }
