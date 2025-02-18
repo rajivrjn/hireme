@@ -143,81 +143,11 @@
             <h1 class="section_title">Career Guidance</h1>
             <div class="swiper advice-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_header">
-                                <div class="card_image">
-                                    <img src="{{ Vite::asset('resources/images/blog.jpg') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="card_body">
-                                <h2>How to apply for a job?</h2>
-                            </div>
-                            <div class="card_footer">
-                                <p>Updated On: 01 Jan 2025</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_header">
-                                <div class="card_image">
-                                    <img src="{{ Vite::asset('resources/images/blog.jpg') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="card_body">
-                                <h2>How to apply for a job?</h2>
-                            </div>
-                            <div class="card_footer">
-                                <p>Updated On: 01 Jan 2025</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_header">
-                                <div class="card_image">
-                                    <img src="{{ Vite::asset('resources/images/blog.jpg') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="card_body">
-                                <h2>How to apply for a job?</h2>
-                            </div>
-                            <div class="card_footer">
-                                <p>Updated On: 01 Jan 2025</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_header">
-                                <div class="card_image">
-                                    <img src="{{ Vite::asset('resources/images/blog.jpg') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="card_body">
-                                <h2>How to apply for a job?</h2>
-                            </div>
-                            <div class="card_footer">
-                                <p>Updated On: 01 Jan 2025</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="" class="card">
-                            <div class="card_header">
-                                <div class="card_image">
-                                    <img src="{{ Vite::asset('resources/images/blog.jpg') }}" alt="">
-                                </div>
-                            </div>
-                            <div class="card_body">
-                                <h2>How to apply for a job?</h2>
-                            </div>
-                            <div class="card_footer">
-                                <p>Updated On: 01 Jan 2025</p>
-                            </div>
-                        </a>
-                    </div>
+                    @for ($i = 0; $i <= 5; $i++)
+                        <div class="swiper-slide">
+                            @include('components/blog-component')
+                        </div>
+                    @endfor
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
